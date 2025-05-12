@@ -44,6 +44,7 @@ body {
                 color: $primary_white;
                 text-decoration: none;
                 font-size: 18px;
+                font-weight: 600;
                 margin-left: 2rem;
 
                 &:hover {
@@ -127,7 +128,7 @@ body {
         }
     }
 
-    .about-container {
+    .section-container {
         margin: 6rem 0;
         width: 100%;
         border: 1px solid $secondary_color;
@@ -143,66 +144,129 @@ body {
                 color: $secondary_color;
             }
             button {
-                color: $primary_white;
-                background-color: $secondary_transparent;
-                padding: 0.2rem 0.6rem 0.4rem;
+                color: $secondary_color;
+                background-color: $secondary_transparent_80;
+                padding: 0.2rem 0.6rem 0.3rem;
                 border-radius: 20px;
+                border: none;
+                outline: none;
             }
         }
 
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            padding-top: 1rem;
+        .curly-braces {
+            color: $secondary_color;
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: 1rem;
 
-            .curly-braces {
-                color: $secondary_color;
-                font-size: 30px;
-                font-weight: 600;
-                margin-top: 1rem;
+            &.close {
+                margin-top: 0;
+            }
+        }
 
-                &.close {
-                    margin-top: 0;
+        &.about-container {
+            .container {
+                width: 90%;
+                margin: 0 auto;
+                padding-top: 1rem;
+
+                .about-content {
+                    width: 100%;
+                    margin: 0 auto;
+                    padding: 0.5rem 2rem;
+                    border-left: 1px solid $light_border;
+
+                    .content {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        margin-bottom: 2rem;
+
+                        .key {
+                            color: $secondary_color;
+                            font-size: 20px;
+                            font-weight: 600;
+                            margin-bottom: 1rem;
+                        }
+                        .value {
+                            color: $primary_white;
+                            font-size: 16px;
+                            width: 80%;
+                        }
+
+                        &.interests {
+                            margin-bottom: 1rem;
+                            .value {
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 1rem;
+
+                                span {
+                                    color: $primary_white;
+                                    background-color: $secondary_transparent_80;
+                                    padding: 0.2rem 0.7rem;
+                                    border-radius: 7px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
-            .about-content {
-                width: 100%;
-                margin: 0 auto;
-                padding: 0.5rem 2rem;
-                border-left: 1px solid grey;
+        }
 
-                .content {
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    margin-bottom: 2rem;
-
-                    .key {
-                        color: $secondary_color;
-                        font-size: 20px;
-                        font-weight: 600;
+        &.skills-container {
+            .container {
+                .stack-container {
+                    border-left: 1px solid $light_border;
+                    display: grid;
+                    place-items: center;
+                    .content {
+                        width: 90%;
+                        display: grid;
+                        grid-template-columns: 1fr 2fr;
                         margin-bottom: 1rem;
-                    }
-                    .value {
-                        color: $primary_white;
-                        font-size: 16px;
-                        width: 80%;
-                    }
 
-                    &.interests {
-                        margin-bottom: 1rem;
-                        .value {
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 1rem;
+                        strong {
+                            color: $secondary_color;
+                            font-size: 20px;
+                        }
+                        .sub-container {
+                            .square-braces {
+                                font-size: 25px;
+                                color: $secondary_color;
+                            }
+                            .sub-collapse {
+                                color: $secondary_color;
+                                width: 100%;
+                                display: flex;
+                                margin-bottom: 0.5rem;
+                                span {
+                                    background-color: $secondary_transparent_80;
+                                    display: table;
+                                    width: 25px;
+                                    height: 20px;
+                                    padding: 0 0.3rem;
+                                    border-radius: 50%;
+                                    text-align: center;
+                                    scale: 0.9;
+                                }
+                            }
+                            .sub-content {
+                                border-left: 1px solid $light_border;
+                                padding: 1rem;
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
 
-                            span {
-                                color: $primary_white;
-                                background-color: $secondary_transparent_80;
-                                padding: 0.2rem 0.7rem;
-                                border-radius: 7px;
-                                font-size: 14px;
+                                .skill {
+                                    background-color: $secondary_transparent_80;
+                                    color: $secondary_color;
+                                    padding: 0.7rem;
+                                    font-size: 18px;
+                                    margin: 0 1rem 1rem;
+                                    border-radius: 7px;
+                                }
                             }
                         }
                     }
