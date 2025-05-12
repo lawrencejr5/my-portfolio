@@ -2,23 +2,20 @@
 
 @font-face {
     font-family: Ibm Mono;
-    src: url("../fonts/IBMPlexMono-Regular.ttf");
-}
-@font-face {
-    font-family: Ibm Mono_Bold;
-    src: url("../fonts/IBMPlexMono-Bold.ttf");
-    font-weight: bold;
+    src: url("../fonts/FiraMono-Regular.ttf");
 }
 
-:root {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Ibm Mono;
+    line-height: 1.7;
 }
 
 body {
     background-color: $primary_black;
-    font-family: Ibm Mono;
+    color: $primary_white;
 }
 
 .main-container {
@@ -32,7 +29,7 @@ body {
         justify-content: space-between;
         align-items: center;
         border: 1px solid $secondary_color;
-        margin: 2rem 0;
+        margin: 3rem 0;
         padding: 1rem;
         border-radius: 10px;
 
@@ -71,6 +68,145 @@ body {
                 background-color: $primary_white;
                 color: $secondary_color;
                 transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    .hero-container {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+
+        .hero-img {
+            width: 250px;
+            height: 100%;
+            border-radius: 50px;
+        }
+        .hero-content {
+            color: $primary_white;
+
+            .hero-title {
+                margin-bottom: 1rem;
+            }
+            .hero-info {
+                margin-bottom: 1rem;
+            }
+            .hero-info {
+                color: $secondary_color;
+                font-size: 18px;
+            }
+            .hero-socials {
+                margin-top: 2rem;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                gap: 1rem;
+
+                .socials {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    a {
+                        display: table;
+                        display: flex;
+                        align-items: center;
+                        color: $primary_white;
+
+                        &:hover {
+                            color: $secondary_color;
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .about-container {
+        margin: 6rem 0;
+        width: 100%;
+        border: 1px solid $secondary_color;
+        padding: 2rem;
+
+        .header {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                color: $secondary_color;
+            }
+            button {
+                color: $primary_white;
+                background-color: $secondary_transparent;
+                padding: 0.2rem 0.6rem 0.4rem;
+                border-radius: 20px;
+            }
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 1rem;
+
+            .curly-braces {
+                color: $secondary_color;
+                font-size: 30px;
+                font-weight: 600;
+                margin-top: 1rem;
+
+                &.close {
+                    margin-top: 0;
+                }
+            }
+            .about-content {
+                width: 100%;
+                margin: 0 auto;
+                padding: 0.5rem 2rem;
+                border-left: 1px solid grey;
+
+                .content {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-bottom: 2rem;
+
+                    .key {
+                        color: $secondary_color;
+                        font-size: 20px;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+                    .value {
+                        color: $primary_white;
+                        font-size: 16px;
+                        width: 80%;
+                    }
+
+                    &.interests {
+                        margin-bottom: 1rem;
+                        .value {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 1rem;
+
+                            span {
+                                color: $primary_white;
+                                background-color: $secondary_transparent_80;
+                                padding: 0.2rem 0.7rem;
+                                border-radius: 7px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
