@@ -14,7 +14,7 @@
 }
 
 body {
-    background: linear-gradient(150deg, rgb(26, 26, 26), black);
+    background: linear-gradient(150deg, #1a1a1a, black);
     background-attachment: fixed;
     color: $primary_white;
 }
@@ -25,58 +25,76 @@ body {
     margin: 0 auto;
 
     .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 1px solid $light_border;
-        margin: 3rem 0;
-        padding: 1rem;
-        border-radius: 10px;
-
-        .name {
-            color: $primary_white;
-            font-size: 20px;
-            font-weight: 700;
+        z-index: 10;
+        transition: transform 0.3s ease-in-out;
+        margin: 2rem 0;
+        &.hidden {
+            transform: translateY(-150%);
+        }
+        &.visible {
+            transform: translateY(0);
         }
 
-        .nav-links {
-            .link {
+        .nav-container {
+            background: linear-gradient(150deg, #1a1a1a, black);
+            padding: 1rem;
+            border-radius: 10px;
+            max-width: 1000px;
+            border: 1px solid $light_border;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+
+            .name {
                 color: $primary_white;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .nav-links {
+                .link {
+                    color: $primary_white;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-left: 2rem;
+
+                    &:hover {
+                        color: $secondary_color;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .resume-btn {
+                background-color: $secondary_transparent_80;
+                color: $primary_white;
+                border: 1px solid $secondary_color;
+                padding: 0.3rem 1rem;
+                border-radius: 10px;
                 text-decoration: none;
                 font-size: 18px;
-                font-weight: 600;
-                margin-left: 2rem;
-
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
                 &:hover {
+                    background-color: $primary_white;
                     color: $secondary_color;
                     transition: all 0.3s ease-in-out;
                 }
             }
         }
-
-        .resume-btn {
-            background-color: $secondary_transparent_80;
-            color: $primary_white;
-            border: 1px solid $secondary_color;
-            padding: 0.3rem 1rem;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            &:hover {
-                background-color: $primary_white;
-                color: $secondary_color;
-                transition: all 0.3s ease-in-out;
-            }
-        }
     }
 
     .hero-container {
-        margin-top: 5rem;
+        margin-top: 10rem;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
