@@ -335,4 +335,28 @@ body {
             }
         }
     }
+
+    footer {
+        padding-bottom: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            strong {
+                color: $secondary_color;
+            }
+        }
+
+        .socials {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            a {
+                color: $primary_white;
+                text-decoration: none;
+            }
+        }
+    }
 }

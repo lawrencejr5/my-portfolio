@@ -14,10 +14,13 @@ const Nav: React.FC = () => {
         <Link className="link" href="/">
           Home
         </Link>
-        <Link className="link" href="#about-main">
+        <Link className="link" href="#about">
           About
         </Link>
-        <Link className="link" href="#projects-main">
+        <Link className="link" href="#stack">
+          Skills
+        </Link>
+        <Link className="link" href="#projects">
           Projects
         </Link>
       </div>
