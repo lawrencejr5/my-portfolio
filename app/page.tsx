@@ -7,6 +7,8 @@ import { FaThreads } from "react-icons/fa6";
 
 import { projects } from "./data/projects";
 
+import Typewriter from "./components/Typewriter";
+
 export default function Home() {
   return (
     <main className="main-container">
@@ -22,9 +24,12 @@ export default function Home() {
           <h1 className="hero-title">OPUTA_LAWRENCE</h1>
           <p className="hero-info">Full_Stack_Developer</p>
           <p className="hero-subtitle">
-            Hey there, I am a developer with a love affair for web app
+            <Typewriter
+              speed={5}
+              text=" Hey there, I am a developer with a love affair for web app
             development. I’m constantly exploring the latest technologies to
-            build seamless, user-centric digital experiences.
+            build seamless, user-centric digital experiences."
+            />
           </p>
           <div className="hero-socials">
             <strong>Find_me_on:</strong>
