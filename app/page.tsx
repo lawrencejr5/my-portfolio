@@ -5,6 +5,8 @@ import Nav from "./components/Nav";
 import { FaGithub, FaWhatsapp, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { FaThreads } from "react-icons/fa6";
 
+import { projects } from "./data/projects";
+
 export default function Home() {
   return (
     <main className="main-container">
@@ -18,7 +20,7 @@ export default function Home() {
         />
         <div className="hero-content">
           <h1 className="hero-title">OPUTA_LAWRENCE</h1>
-          <p className="hero-info">Software_Engineer</p>
+          <p className="hero-info">Full_Stack_Developer</p>
           <p className="hero-subtitle">
             Hey there, I am a developer with a love affair for web app
             development. I’m constantly exploring the latest technologies to
@@ -143,6 +145,49 @@ export default function Home() {
                 <p className="square-braces close">{"]"}</p>
               </div>
             </div>
+          </div>
+          <p className="curly-braces close">{"}"}</p>
+        </div>
+      </div>
+
+      <div className="section-container projects-container">
+        <div className="header">
+          <h1>My_projects:</h1>
+          <button>collapse</button>
+        </div>
+        <div className="container">
+          <p className="curly-braces open">{"{"}</p>
+          <div className="project-container">
+            {projects.map((project, i) => {
+              return (
+                <div className="project" key={i}>
+                  <img
+                    className="project-img"
+                    src={`/images/projects/${project?.img}`}
+                    alt=""
+                  />
+                  <div className="project-info">
+                    <div className="info">
+                      <h2>{project.title}</h2>
+                      <p>{project.subtitle}</p>
+                    </div>
+                    <div className="stack">
+                      {project?.stack?.map((item, i) => {
+                        return <span key={i}>{item}</span>;
+                      })}
+                    </div>
+                    <div className="links">
+                      <a href={project?.links?.live} target="_blank">
+                        View_Live &rarr;
+                      </a>
+                      <a href={project?.links?.code} target="_blank">
+                        Source_code &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
           <p className="curly-braces close">{"}"}</p>
         </div>

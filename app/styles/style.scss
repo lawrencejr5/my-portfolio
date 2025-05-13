@@ -14,7 +14,8 @@
 }
 
 body {
-    background-color: $primary_black;
+    background: linear-gradient(150deg, rgb(26, 26, 26), black);
+    background-attachment: fixed;
     color: $primary_white;
 }
 
@@ -28,7 +29,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid $secondary_color;
+        border: 1px solid $light_border;
         margin: 3rem 0;
         padding: 1rem;
         border-radius: 10px;
@@ -55,10 +56,11 @@ body {
         }
 
         .resume-btn {
-            background-color: $primary_white;
-            color: $primary_black;
+            background-color: $secondary_transparent_80;
+            color: $primary_white;
+            border: 1px solid $secondary_color;
             padding: 0.3rem 1rem;
-            border-radius: 5px;
+            border-radius: 10px;
             text-decoration: none;
             font-size: 18px;
             font-weight: 700;
@@ -131,7 +133,8 @@ body {
     .section-container {
         margin: 6rem 0;
         width: 100%;
-        border: 1px solid $secondary_color;
+        border-radius: 10px;
+        border: 1px solid $secondary_transparent_80;
         padding: 2rem;
 
         .header {
@@ -238,10 +241,11 @@ body {
                                 color: $secondary_color;
                             }
                             .sub-collapse {
-                                color: $secondary_color;
+                                color: $secondary_transparent;
                                 width: 100%;
                                 display: flex;
                                 margin-bottom: 0.5rem;
+
                                 span {
                                     background-color: $secondary_transparent_80;
                                     display: table;
@@ -261,11 +265,68 @@ body {
 
                                 .skill {
                                     background-color: $secondary_transparent_80;
-                                    color: $secondary_color;
-                                    padding: 0.7rem;
+                                    color: $primary_white;
+                                    padding: 0.3rem 0.7rem;
                                     font-size: 18px;
                                     margin: 0 1rem 1rem;
                                     border-radius: 7px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.projects-container {
+            .container {
+                .project-container {
+                    width: 100%;
+                    display: grid;
+                    place-items: center;
+                    border-left: 1px solid $light_border;
+                    .project {
+                        display: flex;
+                        align-items: flex-start;
+                        width: 90%;
+                        gap: 2rem;
+                        border-bottom: 1px solid $light_border;
+                        padding-bottom: 1rem;
+                        margin-top: 2rem;
+
+                        .project-img {
+                            width: 250px;
+                            height: 100%;
+                            border-radius: 20px;
+                            border: 3px solid $primary_white;
+                        }
+
+                        .project-info {
+                            width: 100%;
+                            .stack {
+                                margin-top: 1rem;
+                                display: flex;
+                                align-items: center;
+                                gap: 1rem;
+
+                                span {
+                                    color: $secondary_color;
+                                    background-color: $secondary_transparent_80;
+                                    border-radius: 15px;
+                                    padding: 0.3rem 0.7rem;
+                                    font-size: 12px;
+                                }
+                            }
+
+                            .links {
+                                margin-top: 2rem;
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                gap: 1rem;
+                                a {
+                                    text-decoration: none;
+                                    color: $secondary_color;
                                 }
                             }
                         }
