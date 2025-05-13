@@ -1,0 +1,337 @@
+@use "./variables.scss" as *;
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        padding: 1rem;
+
+        .main-nav {
+            padding: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .main-container {
+        .main-nav {
+            .nav-container {
+                .nav-links {
+                    .link {
+                        font-size: 16px;
+                    }
+                }
+                .resume-btn {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .section-container {
+            &.about-container {
+                .container {
+                    .about-content {
+                        .content {
+                            gap: 1rem;
+                            .key {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.skills-container {
+                .container {
+                    .stack-container {
+                        .content {
+                            strong {
+                                font-size: 18px;
+                            }
+                            .sub-container {
+                                .sub-content {
+                                    .skill {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.projects-container {
+                .container {
+                    .project-container {
+                        .project {
+                            .project-img {
+                                width: 180px;
+                                border-radius: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 750px) {
+    .main-container {
+        .main-nav {
+            .nav-container {
+                .nav-links {
+                    .link {
+                        font-size: 16px;
+                    }
+                }
+                .resume-btn {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .hero-container {
+            display: block;
+            padding: 0 1rem;
+            .hero-content {
+                margin-top: 2rem;
+            }
+        }
+
+        .section-container {
+            .header {
+                h1 {
+                    font-size: 20px;
+                }
+            }
+
+            &.about-container {
+                .container {
+                    .about-content {
+                        padding-right: 0;
+                        .content {
+                            display: block;
+
+                            .value {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            &.skills-container {
+                .container {
+                    .stack-container {
+                        .content {
+                            display: block;
+                            strong {
+                                font-size: 18px;
+                            }
+                            .sub-container {
+                                .sub-content {
+                                    .skill {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.projects-container {
+                .container {
+                    .project-container {
+                        .project {
+                            display: block;
+                            .project-img {
+                                width: 300px;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main-container {
+        .main-nav {
+            margin-top: 0rem;
+            .nav-container {
+                padding: 1rem 0.5rem;
+                .name {
+                    font-size: 16px;
+                }
+                .nav-links {
+                    display: none;
+                }
+                .btns {
+                    .resume-btn {
+                        font-size: 14px;
+                        padding: 0.2rem 0.6rem;
+                    }
+                    .bar-btn {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        .hero-container {
+            margin-top: 6rem;
+            display: block;
+
+            .hero-img {
+                width: 200px;
+                height: 100%;
+            }
+
+            .hero-content {
+                margin-top: 2rem;
+
+                .hero-title {
+                    font-size: 25px;
+                }
+                .hero-info {
+                    font-size: 14px;
+                }
+            }
+
+            .hero-subtitle {
+                font-size: 14px;
+            }
+        }
+
+        .section-container {
+            padding: 2rem 1rem;
+            margin: 4rem 0;
+            .header {
+                h1 {
+                    font-size: 22px;
+                }
+                button {
+                    font-size: 10px;
+                    padding: 0.2rem 0.4rem;
+                }
+            }
+
+            .curly-braces {
+                font-size: 22px;
+            }
+
+            &.about-container {
+                .container {
+                    padding-top: 0;
+                    width: 100%;
+                    .about-content {
+                        padding-right: 0;
+                        padding-left: 1rem;
+                        .content {
+                            display: block;
+                            .key {
+                                font-size: 16px;
+                            }
+                            .value {
+                                width: 100%;
+                                font-size: 14px;
+                                line-height: 2;
+                            }
+                            &.interests {
+                                .value {
+                                    span {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.skills-container {
+                .container {
+                    .stack-container {
+                        .content {
+                            width: 100%;
+                            padding: 0.5rem;
+                            display: block;
+                            strong {
+                                font-size: 16px;
+                            }
+                            .sub-container {
+                                .square-braces {
+                                    font-size: 20px;
+                                }
+                                .sub-collapse {
+                                    font-size: 12px;
+                                    margin-top: 0.5rem;
+                                    span {
+                                        scale: 0.7;
+                                        padding: 0;
+                                    }
+                                }
+                                .sub-content {
+                                    padding: 0rem;
+                                    .skill {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.projects-container {
+                .container {
+                    .project-container {
+                        .project {
+                            display: block;
+                            border: 1px solid $light_border;
+                            padding: 0.5rem;
+                            border-radius: 10px;
+                            .project-img {
+                                width: 100%;
+                                border-radius: 5px;
+                                border: none;
+                            }
+                            .project-info {
+                                .info {
+                                    margin-top: 1rem;
+                                    h2 {
+                                        font-size: 22px;
+                                    }
+                                    p {
+                                        margin-top: 1rem;
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                .stack {
+                                    flex-wrap: wrap;
+                                    gap: 0.5rem;
+
+                                    span {
+                                        font-size: 10px;
+                                    }
+                                }
+
+                                .links {
+                                    a {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        p {
+            font-size: 12px;
+        }
+
+        .socials {
+            gap: 0.5rem;
+        }
+    }
+}

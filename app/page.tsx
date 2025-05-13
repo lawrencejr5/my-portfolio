@@ -3,7 +3,10 @@ import Image from "next/image";
 import Nav from "./components/Nav";
 
 import { FaGithub, FaWhatsapp, FaEnvelope, FaLinkedin } from "react-icons/fa";
-import { FaThreads } from "react-icons/fa6";
+import { FaThreads, FaLink } from "react-icons/fa6";
+import { HiMiniBars3BottomRight } from "react-icons/hi2";
+
+import { IoIosLink } from "react-icons/io";
 
 import { projects } from "./data/projects";
 
@@ -183,10 +186,12 @@ export default function Home() {
                     </div>
                     <div className="links">
                       <a href={project?.links?.live} target="_blank">
-                        View_Live &rarr;
+                        View_Live
+                        <FaLink />
                       </a>
                       <a href={project?.links?.code} target="_blank">
-                        Source_code &rarr;
+                        Source_code
+                        <FaGithub />
                       </a>
                     </div>
                   </div>

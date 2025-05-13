@@ -2,7 +2,10 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+
 import { MdOutlineFileDownload } from "react-icons/md";
+import { HiMiniBars3BottomRight } from "react-icons/hi2";
+import { FaBars } from "react-icons/fa";
 
 const Nav: React.FC = () => {
   const [show, setShow] = useState(true);
@@ -30,7 +33,7 @@ const Nav: React.FC = () => {
       <div className="nav-container">
         <div className="name">Oputa_Lawrence</div>
         <div className="nav-links">
-          <Link className="link" href="/">
+          <Link className="link" href="#home">
             Home
           </Link>
           <Link className="link" href="#about">
@@ -43,9 +46,14 @@ const Nav: React.FC = () => {
             Projects
           </Link>
         </div>
-        <button className="resume-btn">
-          Resume <MdOutlineFileDownload />
-        </button>
+        <div className="btns">
+          <button className="resume-btn">
+            Resume <MdOutlineFileDownload />
+          </button>
+          <button className="bar-btn">
+            <HiMiniBars3BottomRight />
+          </button>
+        </div>
       </div>
     </nav>
   );

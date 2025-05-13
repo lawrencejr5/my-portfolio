@@ -11,16 +11,6 @@ interface ProjectType {
 
 export const projects: ProjectType[] = [
   {
-    title: "Yanhub",
-    img: "yanhub.png",
-    subtitle: "A task management web app for Yan Kontent Factory.",
-    stack: ["ReactJs", "Node.js", "Express", "Mongodb"],
-    links: {
-      live: "https://yan-hub.web.app",
-      code: "https://github.com/lawrencejr5/yanhub",
-    },
-  },
-  {
     title: "9jablogue",
     img: "9jablogue.png",
     subtitle: "A Nigerian blogging website.",
@@ -31,7 +21,17 @@ export const projects: ProjectType[] = [
     },
   },
   {
-    title: "Yield Financial Services",
+    title: "Yanhub",
+    img: "yanhub.png",
+    subtitle: "A task management web app for Yan Kontent Factory.",
+    stack: ["ReactJs", "Node.js", "Express", "Mongodb"],
+    links: {
+      live: "https://yan-hub.web.app",
+      code: "https://github.com/lawrencejr5/yanhub",
+    },
+  },
+  {
+    title: "YFincs",
     img: "yfincs.png",
     subtitle: "A defi staking website.",
     stack: ["Php", "MySql", "Jquery"],
@@ -44,7 +44,7 @@ export const projects: ProjectType[] = [
     title: "Aniobi",
     img: "aniobi.png",
     subtitle: "An anonymous messaging social media web application.",
-    stack: ["Reactjs", "Typescript", "Scss", "Node.js", "Mongodb"],
+    stack: ["Reactjs", "Typescript", "Scss", "Node.js"],
     links: {
       live: "https://test-aniobi.web.app",
       code: "https://github.com/lawrencejr5/aniobi",
