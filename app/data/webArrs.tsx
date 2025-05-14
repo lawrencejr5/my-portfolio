@@ -13,7 +13,7 @@ export const webArrs: WebArrTypes = {
     "Blockchain",
     "Machine_Learning",
     "Astro_Physics",
-    "Human_Psychology",
+    "Psychology",
   ],
   skills: {
     frontEnd: ["Reactjs", "Typescript", "SCSS", "NextJs", "Jquery"],

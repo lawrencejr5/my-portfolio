@@ -11,13 +11,12 @@ const Hero = () => {
       <img className="hero-img" src="/images/avatars/avatar2.png" alt="hero" />
       <div className="hero-content">
         <h1 className="hero-title">OPUTA_LAWRENCE</h1>
-        <p className="hero-info">Full_Stack_Developer</p>
+        <p className="hero-info">Software_Engineer</p>
         <p className="hero-subtitle">
           <Typewriter
             speed={5}
             text=" Hey there, I am a developer with a love affair for web app
-                development. I’m constantly exploring the latest technologies to
-                build seamless, user-centric digital experiences."
+                development. Creating web applications that connect and solve problems is what motvates me."
           />
         </p>
         <div className="hero-socials">

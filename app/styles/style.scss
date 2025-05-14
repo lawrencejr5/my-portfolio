@@ -113,11 +113,6 @@ body {
                         display: flex;
                         align-items: center;
                         gap: 0.5rem;
-                        &:hover {
-                            background-color: $primary_white;
-                            color: $secondary_color;
-                            transition: all 0.3s ease-in-out;
-                        }
                     }
                     .bar-btn {
                         border: none;
@@ -194,7 +189,7 @@ body {
 
                 .socials {
                     display: flex;
-                    gap: 2rem;
+                    gap: 1rem;
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
@@ -301,6 +296,11 @@ body {
                             color: $primary_white;
                             font-size: 16px;
                             width: 80%;
+
+                            span {
+                                display: block;
+                                margin-bottom: 1rem;
+                            }
                         }
 
                         &.interests {

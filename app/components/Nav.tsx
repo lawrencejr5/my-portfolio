@@ -56,9 +56,14 @@ const Nav: React.FC = () => {
             </Link>
           </div>
           <div className="btns">
-            <button className="resume-btn">
-              Resume <MdOutlineFileDownload />
-            </button>
+            <a
+              href="https://drive.google.com/file/d/14elV06TENpPtigYSw0LkMxnU6puaEfMn/view?usp=drivesdk"
+              download
+              target="_blank"
+              className="resume-btn"
+            >
+              Resumé <MdOutlineFileDownload />
+            </a>
             <button className="bar-btn" onClick={openNav}>
               {isOpen ? <HiX /> : <HiMiniBars3BottomRight />}
             </button>
