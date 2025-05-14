@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { MdOutlineFileDownload } from "react-icons/md";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
-import { FaBars } from "react-icons/fa";
+import { HiX } from "react-icons/hi";
 
 const Nav: React.FC = () => {
   const [show, setShow] = useState<boolean>(true);
@@ -60,7 +60,7 @@ const Nav: React.FC = () => {
               Resume <MdOutlineFileDownload />
             </button>
             <button className="bar-btn" onClick={openNav}>
-              <HiMiniBars3BottomRight />
+              {isOpen ? <HiX /> : <HiMiniBars3BottomRight />}
             </button>
           </div>
         </div>

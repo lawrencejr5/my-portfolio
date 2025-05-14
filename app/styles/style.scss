@@ -194,7 +194,7 @@ body {
 
                 .socials {
                     display: flex;
-                    gap: 1rem;
+                    gap: 2rem;
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
@@ -204,6 +204,7 @@ body {
                         display: flex;
                         align-items: center;
                         color: $primary_white;
+                        font-size: 20px;
 
                         &:hover {
                             color: $secondary_color;

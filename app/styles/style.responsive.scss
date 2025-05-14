@@ -185,10 +185,17 @@
                 .hero-info {
                     font-size: 14px;
                 }
-            }
-
-            .hero-subtitle {
-                font-size: 14px;
+                .hero-subtitle {
+                    font-size: 14px;
+                }
+                .hero-socials {
+                    .socials {
+                        gap: 1rem;
+                        a {
+                            font-size: 20px;
+                        }
+                    }
+                }
             }
         }
 
