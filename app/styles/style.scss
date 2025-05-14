@@ -242,15 +242,33 @@ body {
                 outline: none;
             }
         }
+        .container {
+            &.flex {
+                display: flex;
+                align-items: center;
 
-        .curly-braces {
-            color: $secondary_color;
-            font-size: 30px;
-            font-weight: 600;
-            margin-top: 1rem;
+                span {
+                    align-self: center;
+                    margin-top: 0.5rem;
+                    color: $secondary_transparent;
+                }
 
-            &.close {
-                margin-top: 0;
+                .curly-braces {
+                    &.close {
+                        align-self: flex-end;
+                    }
+                }
+            }
+
+            .curly-braces {
+                color: $secondary_color;
+                font-size: 30px;
+                font-weight: 600;
+                margin-top: 1rem;
+
+                &.close {
+                    margin-top: 0;
+                }
             }
         }
 

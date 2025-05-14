@@ -1,68 +1,79 @@
 import React from "react";
 
+import { webArrs } from "../../data/webArrs";
+
+const SkillContent: React.FC<{ type: string }> = ({ type }) => {
+  const [arrOpen, setArrOpen] = React.useState<boolean>(true);
+
+  const arr =
+    type === "frontend"
+      ? webArrs?.skills?.frontEnd ?? []
+      : type === "backend"
+      ? webArrs?.skills?.backEnd ?? []
+      : type === "tools"
+      ? webArrs?.skills?.tools ?? []
+      : [];
+
+  return (
+    <div className="content">
+      {type === "frontend" ? (
+        <strong>"Front_End_Dev":</strong>
+      ) : type === "backend" ? (
+        <strong>"Back_End_Dev":</strong>
+      ) : type === "tools" ? (
+        <strong>"Dev_Tools":</strong>
+      ) : null}
+
+      <div className="sub-container">
+        {arrOpen ? (
+          <p className="sub-collapse" onClick={() => setArrOpen(!arrOpen)}>
+            <span>-</span>&nbsp;collapse_items
+          </p>
+        ) : (
+          <p className="sub-collapse" onClick={() => setArrOpen(!arrOpen)}>
+            <span>+</span>&nbsp;expand_items
+          </p>
+        )}
+
+        <p className="square-braces open">{"["}</p>
+        {arrOpen && (
+          <div className="sub-content">
+            {arr.map((skill, i) => (
+              <div className="skill" key={i}>
+                {skill}
+              </div>
+            ))}
+          </div>
+        )}
+
+        <p className="square-braces close">{"]"}</p>
+      </div>
+    </div>
+  );
+};
+
 const Skills = () => {
+  const [mainOpen, setMainOpen] = React.useState<boolean>(true);
+
   return (
     <div className="section-container skills-container" id="stack">
       <div className="header">
         <h1>Tech_stack:</h1>
-        <button>collapse</button>
+        <button onClick={() => setMainOpen(!mainOpen)}>
+          {mainOpen ? "collapse" : "expand"}
+        </button>
       </div>
-      <div className="container">
+      <div className={`container ${!mainOpen ? "flex" : ""}`}>
         <p className="curly-braces open">{"{"}</p>
-        <div className="stack-container">
-          <div className="content">
-            <strong>"Front_End_Dev":</strong>
-
-            <div className="sub-container">
-              <p className="sub-collapse">
-                <span>-</span>&nbsp;collapse_items
-              </p>
-              <p className="square-braces open">{"["}</p>
-              <div className="sub-content">
-                <div className="skill">React</div>
-                <div className="skill">Typescript</div>
-                <div className="skill">SCSS</div>
-                <div className="skill">NextJs</div>
-                <div className="skill">Jquery</div>
-              </div>
-              <p className="square-braces close">{"]"}</p>
-            </div>
+        {mainOpen ? (
+          <div className="stack-container">
+            <SkillContent type="frontend" />
+            <SkillContent type="backend" />
+            <SkillContent type="tools" />
           </div>
-          <div className="content">
-            <strong>"Back_End_Dev":</strong>
-            <div className="sub-container">
-              <p className="sub-collapse">
-                <span>-</span>&nbsp;collapse_items
-              </p>
-              <p className="square-braces open">{"["}</p>
-              <div className="sub-content">
-                <div className="skill">Node.js</div>
-                <div className="skill">Express.js</div>
-                <div className="skill">MongoDb</div>
-                <div className="skill">PHP</div>
-                <div className="skill">MySql</div>
-              </div>
-              <p className="square-braces close">{"]"}</p>
-            </div>
-          </div>
-          <div className="content">
-            <strong>"Dev_Tools":</strong>
-            <div className="sub-container">
-              <p className="sub-collapse">
-                <span>-</span>&nbsp;collapse_items
-              </p>
-              <p className="square-braces open">{"["}</p>
-              <div className="sub-content">
-                <div className="skill">Git</div>
-                <div className="skill">VsCode</div>
-                <div className="skill">Canva</div>
-                <div className="skill">Postman</div>
-                <div className="skill">Cloudinary</div>
-              </div>
-              <p className="square-braces close">{"]"}</p>
-            </div>
-          </div>
-        </div>
+        ) : (
+          <span onClick={() => setMainOpen(true)}>....</span>
+        )}
         <p className="curly-braces close">{"}"}</p>
       </div>
     </div>

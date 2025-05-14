@@ -31,7 +31,7 @@ export const projects: ProjectType[] = [
     },
   },
   {
-    title: "YFincs",
+    title: "YFincs=",
     img: "yfincs.png",
     subtitle: "A defi staking website.",
     stack: ["Php", "MySql", "Jquery"],
