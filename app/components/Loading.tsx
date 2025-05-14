@@ -5,7 +5,7 @@ const Loading = () => {
   return (
     <div className="loading-modal">
       <p className="loading-text">
-        <Typewriter speed={40} text="Oputa's portfolio loading... " />
+        <Typewriter speed={40} text="Portfolio data loading... " />
       </p>
     </div>
   );

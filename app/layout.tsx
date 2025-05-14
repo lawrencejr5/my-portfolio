@@ -17,14 +17,14 @@ export const metadata: Metadata = {
   title: "Oputa Lawrence",
   description: "Oputa Lawrence's portfolio",
   icons: {
-    icon: "favicon.ico",
-    shortcut: "favicon.ico",
-    apple: "favicon.ico",
+    icon: "/images/avatars/avatar2-rounded.png",
+    shortcut: "/images/avatars/avatar2-rounded.png",
+    apple: "/images/avatars/avatar2-rounded.png",
   },
 };
 
 export const viewport = {
-  themeColor: "#f2b064",
+  themeColor: "#1a1a1a",
 };
 
 export default function RootLayout({
@@ -34,6 +34,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        {/* Other meta tags can go here */}
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
