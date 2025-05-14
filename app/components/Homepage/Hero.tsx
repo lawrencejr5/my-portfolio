@@ -16,7 +16,7 @@ const Hero = () => {
           <Typewriter
             speed={5}
             text=" Hey there, I am a developer with a love affair for web app
-                development. Creating web applications that connect and solve problems is what motvates me."
+                development. Creating web applications that connect and solve problems is what motivates me."
           />
         </p>
         <div className="hero-socials">

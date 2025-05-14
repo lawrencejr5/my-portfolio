@@ -21,18 +21,18 @@ const About = () => {
             <div className="content">
               <p className="key">"Summary":</p>
               <p className="value">
-                <span>
+                <span className="para">
                   “I am a freelance software engineer currently based in Asaba,
                   Nigeria with over 5 years of experience building meaningful
                   digital solutions for the web.”
                 </span>
-                <span>
+                <span className="para">
                   "I am constantly exploring the latest technologies to build
                   seamless digital experiences. My portfolio offers a look at my
                   web development capabilities and I am open to new
                   collaborations."
                 </span>
-                <span>
+                <span className="para">
                   "Beyond the keyboard, I'm a dedicated Real Madrid fan,
                   currently learning French, and enjoy some downtime with mobile
                   gaming."

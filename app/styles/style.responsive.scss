@@ -233,6 +233,10 @@
                                 width: 100%;
                                 font-size: 14px;
                                 line-height: 2;
+
+                                span.para {
+                                    margin-bottom: 0.5rem;
+                                }
                             }
                             &.interests {
                                 .value {
