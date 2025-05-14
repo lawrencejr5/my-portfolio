@@ -39,13 +39,13 @@ const Projects = () => {
                       })}
                     </div>
                     <div className="links">
-                      <a href={project?.links?.live} target="_blank">
-                        View_Live
-                        <FaLink />
-                      </a>
                       <a href={project?.links?.code} target="_blank">
                         Source_code
                         <FaGithub />
+                      </a>
+                      <a href={project?.links?.live} target="_blank">
+                        View_Live
+                        <FaLink />
                       </a>
                     </div>
                   </div>
