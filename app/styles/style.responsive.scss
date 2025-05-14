@@ -14,13 +14,15 @@
     .main-container {
         .main-nav {
             .nav-container {
-                .nav-links {
-                    .link {
+                .nav-row {
+                    .nav-links {
+                        .link {
+                            font-size: 16px;
+                        }
+                    }
+                    .resume-btn {
                         font-size: 16px;
                     }
-                }
-                .resume-btn {
-                    font-size: 16px;
                 }
             }
         }
@@ -74,14 +76,26 @@
 @media screen and (max-width: 750px) {
     .main-container {
         .main-nav {
+            margin-top: 0rem;
             .nav-container {
-                .nav-links {
-                    .link {
+                padding: 1rem 0.5rem;
+
+                .nav-row {
+                    .name {
                         font-size: 16px;
                     }
-                }
-                .resume-btn {
-                    font-size: 16px;
+                    .nav-links {
+                        display: none;
+                    }
+                    .btns {
+                        .resume-btn {
+                            font-size: 14px;
+                            padding: 0.2rem 0.6rem;
+                        }
+                        .bar-btn {
+                            display: flex;
+                        }
+                    }
                 }
             }
         }
@@ -153,28 +167,6 @@
 
 @media screen and (max-width: 450px) {
     .main-container {
-        .main-nav {
-            margin-top: 0rem;
-            .nav-container {
-                padding: 1rem 0.5rem;
-                .name {
-                    font-size: 16px;
-                }
-                .nav-links {
-                    display: none;
-                }
-                .btns {
-                    .resume-btn {
-                        font-size: 14px;
-                        padding: 0.2rem 0.6rem;
-                    }
-                    .bar-btn {
-                        display: flex;
-                    }
-                }
-            }
-        }
-
         .hero-container {
             margin-top: 6rem;
             display: block;

@@ -66,63 +66,94 @@ body {
             max-width: 1000px;
             border: 2px solid $light_border;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
+            transition: 0.3s ease-in-out;
 
-            .name {
-                color: $primary_white;
-                font-size: 20px;
-                font-weight: 700;
+            .mobile-nav-links {
+                display: none;
             }
 
-            .nav-links {
-                .link {
-                    color: $primary_white;
-                    text-decoration: none;
-                    font-size: 18px;
-                    font-weight: 600;
-                    margin-left: 2rem;
-
-                    &:hover {
-                        color: $secondary_color;
-                        transition: all 0.3s ease-in-out;
-                    }
-                }
-            }
-            .btns {
+            .nav-row {
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
-                gap: 1rem;
-                .resume-btn {
-                    background-color: $secondary_transparent_80;
+
+                .name {
                     color: $primary_white;
-                    border: 1px solid $secondary_color;
-                    padding: 0.3rem 1rem;
-                    border-radius: 10px;
-                    text-decoration: none;
-                    font-size: 18px;
+                    font-size: 20px;
                     font-weight: 700;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                    &:hover {
-                        background-color: $primary_white;
-                        color: $secondary_color;
-                        transition: all 0.3s ease-in-out;
+                }
+
+                .nav-links {
+                    .link {
+                        color: $primary_white;
+                        text-decoration: none;
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-left: 2rem;
+
+                        &:hover {
+                            color: $secondary_color;
+                            transition: all 0.3s ease-in-out;
+                        }
                     }
                 }
-                .bar-btn {
-                    border: none;
-                    outline: none;
-                    background-color: transparent;
-                    font-size: 25px;
-                    color: $secondary_color;
+                .btns {
                     display: flex;
                     align-items: center;
-                    padding: 0;
-                    display: none;
+                    gap: 1rem;
+                    .resume-btn {
+                        background-color: $secondary_transparent_80;
+                        color: $primary_white;
+                        border: 1px solid $secondary_color;
+                        padding: 0.3rem 1rem;
+                        border-radius: 10px;
+                        text-decoration: none;
+                        font-size: 18px;
+                        font-weight: 700;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        &:hover {
+                            background-color: $primary_white;
+                            color: $secondary_color;
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                    .bar-btn {
+                        border: none;
+                        outline: none;
+                        background-color: transparent;
+                        font-size: 25px;
+                        color: $secondary_color;
+                        display: flex;
+                        align-items: center;
+                        padding: 0;
+                        display: none;
+                    }
+                }
+            }
+
+            &.expand {
+                align-items: flex-start;
+                margin-top: 1rem;
+                .mobile-nav-links {
+                    margin: 1rem 0;
+                    padding: 0 0.5rem;
+                    border: 1px solid $light_border;
+                    border-radius: 10px;
+
+                    &.open {
+                        display: block;
+                    }
+
+                    .link {
+                        color: $primary_white;
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-weight: 600;
+                        display: block;
+                        margin: 1rem 0;
+                    }
                 }
             }
         }
@@ -190,7 +221,7 @@ body {
         border-radius: 10px;
         border: 1px solid $secondary_transparent_80;
         padding: 2rem;
-        scroll-margin-top: 2rem;
+        scroll-margin-top: 4rem;
 
         .header {
             display: flex;
