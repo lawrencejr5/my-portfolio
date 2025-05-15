@@ -403,8 +403,13 @@ body {
                         .project-img {
                             width: 250px;
                             height: 100%;
+                            filter: brightness(0.7);
                             border-radius: 20px;
+                            cursor: pointer;
                             border: 3px solid $primary_white;
+                        }
+                        .project-img:hover {
+                            filter: brightness(1);
                         }
 
                         .project-info {
